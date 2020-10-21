@@ -14,6 +14,7 @@ import { environment } from '../environments/environment';
 import { LocaisComponent } from './locais/locais.component';
 import { RegrasComponent } from './regras/regras.component';
 import { LoginComponent } from './login/login.component';
+import { UsuarioService } from './servico/usuario.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import { LoginComponent } from './login/login.component';
     ]),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [],
+  providers: [UsuarioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

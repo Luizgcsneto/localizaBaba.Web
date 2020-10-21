@@ -1,13 +1,16 @@
 
 <div class="text-center">
-  <form class="form-signin">
+  <form class="form-signin" #f="ngForm">
 
     <h1 class="h4 mb-2 login">Login do Cliente</h1>
 
-    <label for="inputEmail" class="sr-only">Email</label>
+    <label for="inputEmail" class="sr-only">E-mail: </label>
     <input type="email" id="inputEmail"
-           name="email" placeholder="Digite seu E-mail"
-           class="form-control mb-2" [(ngModel)]="usuario.email"
+           name="email"
+           placeholder="Digite seu E-mail"
+           class="form-control mb-2"
+           (blur)="isEmail(inputEmail)"
+           [(ngModel)]="usuario.email"
            [ngClass]="{
                   'is-invalid': email.invalid && (email.dirty || email.touched),
                   'is-valid': email.valid && (email.dirty || email.touched)
@@ -19,18 +22,20 @@
     <div class="invalid-feedback mb-2" *ngIf="email.invalid && (email.dirty || email.touched)">
 
       <div *ngIf="email.errors.required">
-        Email deve ser preenchido
+        E-mail deve ser preenchido
       </div>
 
       <div *ngIf="email.errors.email">
-        Email não está no formato correto
+        E-mail não está no formato correto
       </div>
     </div>
 
-    <label for="inputSenha" class="sr-only">Senha</label>
+    <label for="inputSenha" class="sr-only">Senha:</label>
     <input type="password" id="inputSenha"
-           name="senha" placeholder="Informe sua senha"
-           class="form-control mb-2" [(ngModel)]="usuario.senha"
+           name="senha"
+           placeholder="Informe sua senha"
+           class="form-control mb-2"
+           [(ngModel)]="usuario.senha"
            [ngClass]="{
                   'is-invalid': senha.invalid && (senha.dirty || senha.touched),
                   'is-valid': senha.valid && (senha.dirty || senha.touched)
@@ -44,7 +49,8 @@
 
     </div>
 
-    <button class="btn btn-primary btn-block" type="submit" (click)="entrar()">
+    <button class="btn btn-primary btn-block" type="submit" (click)="entrar()" [disabled]="!f.valid">
+      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" *ngIf="ativar_spinner"></span>
 
       Entrar
     </button><br />
@@ -57,12 +63,6 @@
       {{ mensagem }}
 
     </div>
-
-
-
-
-
-
 
   </form>
 
