@@ -7,8 +7,6 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
-import { CounterComponent } from './counter/counter.component';
-import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { LocaisComponent } from './locais/locais.component';
@@ -21,8 +19,6 @@ import { UsuarioService } from './servico/usuario.service';
     AppComponent,
     NavMenuComponent,
     HomeComponent,
-    CounterComponent,
-    FetchDataComponent,
     LocaisComponent,
     RegrasComponent,
     LoginComponent
@@ -33,8 +29,6 @@ import { UsuarioService } from './servico/usuario.service';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
       { path: 'locais', component: LocaisComponent },
       { path: 'regras', component: RegrasComponent },
       { path: 'login', component: LoginComponent },

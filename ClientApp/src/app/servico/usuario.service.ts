@@ -54,7 +54,7 @@ export class UsuarioService implements OnInit {
 
 
     // this.baseURL = raiz do site que pode ser exemplo.: www.rkcomex.com.br
-    let retorno = this.http.post<Usuario>("https://localhost:44328/api/Usuario/VerificarUsuario", usuario, { headers: this.header });
+    let retorno = this.http.post<Usuario>("https://localhost:44/api/Usuario/VerificarUsuario", usuario, { headers: this.header });
 
     return retorno;
 
@@ -63,32 +63,32 @@ export class UsuarioService implements OnInit {
 
   public cadastrarUsuario(usuario: Usuario): Observable<Usuario> {
 
-    return this.http.post<Usuario>("https://localhost:44328/api/usuario", JSON.stringify(usuario), { headers: this.header });
+    return this.http.post<Usuario>("https://localhost:44341/api/usuario", JSON.stringify(usuario), { headers: this.header });
 
   }
 
   public salvarUsuario(usuario: Usuario): Observable<Usuario> {
 
-    return this.http.post<Usuario>("https://localhost:44328/api/usuario/salvarUsuario", JSON.stringify(usuario), { headers: this.header });
+    return this.http.post<Usuario>("https://localhost:44341/api/usuario/salvarUsuario", JSON.stringify(usuario), { headers: this.header });
 
   }
 
   public deletarUsuario(usuario: Usuario): Observable<Usuario> {
 
-    return this.http.post<Usuario>("https://localhost:44328/api/usuario/deletarUsuario", JSON.stringify(usuario), { headers: this.header });
+    return this.http.post<Usuario>("https://localhost:44341/api/usuario/deletarUsuario", JSON.stringify(usuario), { headers: this.header });
 
   }
 
 
   public obterTodosUsuarios(): Observable<Usuario[]> {
 
-    return this.http.get<Usuario[]>("https://localhost:44328/api/usuario");
+    return this.http.get<Usuario[]>("https://localhost:44341/api/usuario");
 
   }
 
   public obterUsuario(usuarioId: number): Observable<Usuario> {
 
-    return this.http.get<Usuario>("https://localhost:44328/api/usuario");
+    return this.http.get<Usuario>("https://localhost:44341/api/usuario");
   }
 
 }

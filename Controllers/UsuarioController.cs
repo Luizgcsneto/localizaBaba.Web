@@ -26,7 +26,7 @@ namespace localizaBaba.Web.Controllers
 
             try
             {
-                //var result = _repo.
+                
                 using (var bd = new BDContext())
                 {
                     usuarios = bd.Usuarios.ToList();
