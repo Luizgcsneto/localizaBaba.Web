@@ -13,6 +13,7 @@ import { LocaisComponent } from './locais/locais.component';
 import { RegrasComponent } from './regras/regras.component';
 import { LoginComponent } from './login/login.component';
 import { UsuarioService } from './servico/usuario.service';
+import { GuardRoutes } from './autorizacao/guard.routes';
 
 @NgModule({
   declarations: [

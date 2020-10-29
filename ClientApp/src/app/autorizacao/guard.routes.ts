@@ -20,7 +20,7 @@ export class GuardRoutes implements CanActivate {
       return true;
     }
 
-    this.router.navigate(['/entrar'], { queryParams: { returnUrl: state.url } });
+    this.router.navigate(['/login'], { queryParams: { returnUrl: state.url } });
     return false;
   }
 
