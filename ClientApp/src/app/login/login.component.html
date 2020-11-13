@@ -9,7 +9,6 @@
            name="email"
            placeholder="Digite seu E-mail"
            class="form-control mb-2"
-           (blur)="isEmail(inputEmail)"
            [(ngModel)]="usuario.email"
            [ngClass]="{
                   'is-invalid': email.invalid && (email.dirty || email.touched),
