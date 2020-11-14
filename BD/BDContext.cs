@@ -8,11 +8,15 @@ using System.Threading.Tasks;
 
 namespace localizaBaba.Web.BD
 {
-    public class BDContext :  DbContext
+    public class BDContext : DbContext
     {
         public BDContext() { }
 
         public DbSet<Usuario> Usuarios { get; set; }
+
+        public DbSet<Cliente> Clientes { get; set; }
+
+        public DbSet<Baba> Babas { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -31,9 +35,11 @@ namespace localizaBaba.Web.BD
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-          
+
             modelBuilder.ApplyConfiguration(new ConfigurationUsuario());
-    
+            modelBuilder.ApplyConfiguration(new ConfigarationBaba());
+            modelBuilder.ApplyConfiguration(new ConfigaurationCliente());
+
         }
     }
 }
