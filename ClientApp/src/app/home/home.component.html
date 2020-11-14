@@ -63,7 +63,7 @@
           <a class="nav-link" href="#" data-toggle="modal" data-target="#modalLogin">Login</a>
         </li>
         <li class="nav-item">
-          <a class="btn btn-outline-primary ml-md-2" href="inscricao.html">Inscreva-se</a>
+          <a class="btn btn-outline-primary ml-md-2" [routerLink]="['criar']">Inscreva-se</a>
         </li>
       </ul>
     </div>
@@ -117,7 +117,7 @@
           <div class="input-group input-group-lg">
             <input type="text" class="form-control" placeholder="Email" aria-label="Email">
             <span class="input-group-btn">
-              <button class="btn btn-primary" type="button">Inscreva-se</button>
+              <button class="btn btn-primary" type="button" [routerLink]="['criar']">Inscreva-se</button>
             </span>
           </div>
         </form>

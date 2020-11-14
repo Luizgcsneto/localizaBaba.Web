@@ -39,6 +39,8 @@ import { ClienteComponent } from './cliente/cliente.component';
       { path: 'locais', component: LocaisComponent },
       { path: 'regras', component: RegrasComponent },
       { path: 'login', component: LoginComponent },
+      { path: 'criar', component: UsuarioComponent },
+
     ]),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
