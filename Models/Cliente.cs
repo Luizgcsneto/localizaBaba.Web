@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace localizaBaba.Web.Models
 {
-    public class Usuario
+    public class Cliente
     {
         public Guid Id { get; set; }
 
@@ -16,10 +16,5 @@ namespace localizaBaba.Web.Models
         public string Email { get; set; }
 
         public string Senha { get; set; }
-
-        public Usuario()
-        {
-
-        }
     }
 }

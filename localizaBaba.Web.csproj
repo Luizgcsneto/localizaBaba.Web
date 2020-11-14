@@ -42,6 +42,8 @@
     <None Remove="ClientApp\src\app\autorizacao\guard.routes.ts" />
     <None Remove="ClientApp\src\app\locais\locais.component.ts" />
     <None Remove="ClientApp\src\app\login\login.component.ts" />
+    <None Remove="ClientApp\src\app\model\baba.ts" />
+    <None Remove="ClientApp\src\app\model\cliente.ts" />
     <None Remove="ClientApp\src\app\model\usuario.ts" />
     <None Remove="ClientApp\src\app\regras\regras.component.ts" />
     <None Remove="ClientApp\src\app\servico\usuario.service.ts" />
@@ -51,6 +53,8 @@
     <TypeScriptCompile Include="ClientApp\src\app\autorizacao\guard.routes.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\locais\locais.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\login\login.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\model\baba.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\model\cliente.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\model\usuario.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\regras\regras.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\servico\usuario.service.ts" />

@@ -14,6 +14,9 @@ import { RegrasComponent } from './regras/regras.component';
 import { LoginComponent } from './login/login.component';
 import { UsuarioService } from './servico/usuario.service';
 import { GuardRoutes } from './autorizacao/guard.routes';
+import { UsuarioComponent } from './usuario/usuario.component';
+import { BabaComponent } from './baba/baba.component';
+import { ClienteComponent } from './cliente/cliente.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { GuardRoutes } from './autorizacao/guard.routes';
     HomeComponent,
     LocaisComponent,
     RegrasComponent,
-    LoginComponent
+    LoginComponent,
+    UsuarioComponent,
+    BabaComponent,
+    ClienteComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
