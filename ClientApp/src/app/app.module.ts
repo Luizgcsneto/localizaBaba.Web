@@ -18,6 +18,8 @@ import { UsuarioComponent } from './usuario/usuario.component';
 import { BabaComponent } from './baba/baba.component';
 import { ClienteComponent } from './cliente/cliente.component';
 import { DuvidaComponent } from './duvida/duvida.component';
+import { ClienteService } from './servico/cliente.service';
+import { BabaService } from './servico/baba.service';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import { DuvidaComponent } from './duvida/duvida.component';
     ]),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [UsuarioService],
+  providers: [UsuarioService,
+              ClienteService,
+              BabaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

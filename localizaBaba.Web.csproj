@@ -46,6 +46,8 @@
     <None Remove="ClientApp\src\app\model\cliente.ts" />
     <None Remove="ClientApp\src\app\model\usuario.ts" />
     <None Remove="ClientApp\src\app\regras\regras.component.ts" />
+    <None Remove="ClientApp\src\app\servico\baba.service.ts" />
+    <None Remove="ClientApp\src\app\servico\cliente.service.ts" />
     <None Remove="ClientApp\src\app\servico\usuario.service.ts" />
   </ItemGroup>
 
@@ -57,6 +59,8 @@
     <TypeScriptCompile Include="ClientApp\src\app\model\cliente.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\model\usuario.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\regras\regras.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\servico\baba.service.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\servico\cliente.service.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\servico\usuario.service.ts" />
   </ItemGroup>
 
