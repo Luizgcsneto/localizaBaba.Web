@@ -17,6 +17,7 @@ import { GuardRoutes } from './autorizacao/guard.routes';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { BabaComponent } from './baba/baba.component';
 import { ClienteComponent } from './cliente/cliente.component';
+import { DuvidaComponent } from './duvida/duvida.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ClienteComponent } from './cliente/cliente.component';
     LoginComponent,
     UsuarioComponent,
     BabaComponent,
-    ClienteComponent
+    ClienteComponent,
+    DuvidaComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -40,6 +42,9 @@ import { ClienteComponent } from './cliente/cliente.component';
       { path: 'regras', component: RegrasComponent },
       { path: 'login', component: LoginComponent },
       { path: 'criar', component: UsuarioComponent },
+      { path: 'duvida', component: DuvidaComponent },
+      { path: 'baba', component: BabaComponent },
+      { path: 'cliente', component: ClienteComponent },
 
     ]),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })

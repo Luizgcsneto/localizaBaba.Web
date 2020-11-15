@@ -1,73 +1,6 @@
 
-<head>
-  <title>Localiza Babá!</title>
+  <h5>Localiza Babá!</h5>
 
-</head>
-
-  <!--  Modal   -->
-  <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLoginTitulo" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modalLoginTitulo">Entre na Sua Conta</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="form-group">
-              <label for="loginEmail">Email</label>
-              <input type="email" class="form-control" id="loginEmail">
-            </div>
-            <div class="form-group">
-              <label for="loginSenha">Senha</label>
-              <input type="password" class="form-control" id="loginSenha">
-            </div>
-            <button type="submit" class="btn btn-primary">Entrar na Conta</button>
-            <small class="form-text text-muted">Esqueceu a senha? <a href="#">Clique aqui</a>.</small>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Fecha Modal  -->
-
-
-  <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top py-3 box-shadow">
-    <a href="index.html" class="navbar-brand">
-   
-    </a>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Abrir Navegação">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Locais</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="local.html">Recife</a>
-            <a class="dropdown-item" href="local.html">Olinda</a>
-            <a class="dropdown-item" href="local.html">Paulista</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="planos.html">Regras</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contato.html">Contato</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-toggle="modal" data-target="#modalLogin">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-outline-primary ml-md-2" [routerLink]="['criar']">Inscreva-se</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
 
   <section class="container-fluid">
     <div class="row bg-dark text-white">
@@ -190,59 +123,9 @@
 
   <section id="home-quote" class="p-md-5">
     <blockquote class="blockquote text-center text-white p-md-5 p-3">
-      <p class="display-4"><em>"É na velhice dos pais que os filhos lhe retribuem o amor e carinho."</em></p>
+      <p style="color:black" class="display-4"><em>"É na velhice dos pais que os filhos lhe retribuem o amor e carinho."</em></p>
       <footer class="blockquote-footer text-white">Frases do Bem</footer>
     </blockquote>
-  </section>
-
-  <section class="container">
-    <div class="my-5 text-center">
-      <span class="h6 d-block">AINDA ESTÁ COM DÚVIDAS?</span>
-      <h2 class="display-4 text-primary">Perguntas Frequentes</h2>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-md-6" id="perguntasFrequentes" data-children=".pergunta">
-        <div class="pergunta py-2">
-          <a class="lead" data-toggle="collapse" data-parent="#perguntasFrequentes" href="#pergunta1" aria-expanded="true" aria-controls="pergunta1">→ É possível Encontrar uma babá sem sair de casa ?</a>
-          <div id="pergunta1" class="collapse show" role="tabpanel">
-            <p>Claro que é possível como o nosso app você encontra as melhores babás com referências na palma da sua mão!</p>
-          </div>
-        </div>
-        <div class="dropdown-divider"></div>
-        <div class="pergunta py-2">
-          <a class="lead" data-toggle="collapse" data-parent="#perguntasFrequentes" href="#pergunta2" aria-expanded="true" aria-controls="pergunta2">→ Qual a garantia que a babá é de confiança?</a>
-          <div id="pergunta2" class="collapse" role="tabpanel">
-            <p>Sim, temos uma política segura e confiável em relação as prestadoras de serviços.</p>
-          </div>
-        </div>
-        <div class="dropdown-divider"></div>
-        <div class="pergunta py-2">
-          <a class="lead" data-toggle="collapse" data-parent="#perguntasFrequentes" href="#pergunta3" aria-expanded="true" aria-controls="pergunta3">→ Quais são as exigências mais procuradas pelos pais ?</a>
-          <div id="pergunta3" class="collapse" role="tabpanel">
-            <p>Buscamos pessoas integras e sem histórico policial, sempre investigamos as referências, os pais sempre buscam pelo histórico que é disponibilizado no site.</p>
-          </div>
-        </div>
-        <div class="dropdown-divider"></div>
-        <div class="pergunta py-2">
-          <a class="lead" data-toggle="collapse" data-parent="#perguntasFrequentes" href="#pergunta4" aria-expanded="true" aria-controls="pergunta4">→Quais os problemas mais relatados pelas babás?</a>
-          <div id="pergunta4" class="collapse" role="tabpanel">
-            <p>Acredito que quase 90% das das poucas ocorrências é a forma de pagamento.</p>
-          </div>
-        </div>
-        <div class="dropdown-divider"></div>
-        <div class="pergunta py-2">
-          <a class="lead" data-toggle="collapse" data-parent="#perguntasFrequentes" href="#pergunta5" aria-expanded="true" aria-controls="pergunta5">→Qual a sua responsabilidade com os usuários e babás que estão no aplicativo?</a>
-          <div id="pergunta5" class="collapse" role="tabpanel">
-            <p>Nós sempre estamos em contato com todos os lados e procuramos resolver da melhor forma possível.</p>
-          </div>
-        </div>
-        <div class="dropdown-divider"></div>
-      </div>
-    </div>
-    <div class="text-center my-4">
-      <p class="small m-1">FALE CONOSCO PARA MAIS DÚVIDAS</p>
-      <a class="btn btn-primary btn-lg" href="contato.html">Entre em Contato</a>
-    </div>
   </section>
 
   <footer class="bg-dark text-white">
@@ -287,7 +170,4 @@
     </div>
   </footer>
 
-  <script type="text/javascript" src="js/jquery-3.2.1.slim.min.js"></script>
-  <script type="text/javascript" src="js/popper.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
-  <script type="text/javascript" src="js/app.js"></script>
+
