@@ -15,7 +15,7 @@ namespace localizaBaba.Web.BD
             builder.HasData(
                   new Usuario()
                   {
-                      Id = Guid.NewGuid(),
+                      Id = 1,
                       Nome = "Luiz",
                       Email = "luiz@rkcomex.com",
                       Senha = "123456"
