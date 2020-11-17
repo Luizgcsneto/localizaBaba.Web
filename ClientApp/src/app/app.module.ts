@@ -20,6 +20,11 @@ import { ClienteComponent } from './cliente/cliente.component';
 import { DuvidaComponent } from './duvida/duvida.component';
 import { ClienteService } from './servico/cliente.service';
 import { BabaService } from './servico/baba.service';
+import { FaleconoscoComponent } from './faleconosco/faleconosco.component';
+import { CabecalhoComponent } from './cabecalho/cabecalho.component';
+import { FooterComponent } from './footer/footer.component';
+import { ContatoComponent } from './contato/contato.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +37,12 @@ import { BabaService } from './servico/baba.service';
     UsuarioComponent,
     BabaComponent,
     ClienteComponent,
-    DuvidaComponent
+    DuvidaComponent,
+    FaleconoscoComponent,
+    CabecalhoComponent,
+    FooterComponent,
+    ContatoComponent,
+    CadastroComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -47,6 +57,8 @@ import { BabaService } from './servico/baba.service';
       { path: 'duvida', component: DuvidaComponent },
       { path: 'baba', component: BabaComponent },
       { path: 'cliente', component: ClienteComponent },
+      { path: 'contato', component: ContatoComponent },
+      { path: 'cadastro', component: CadastroComponent },
 
     ]),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
