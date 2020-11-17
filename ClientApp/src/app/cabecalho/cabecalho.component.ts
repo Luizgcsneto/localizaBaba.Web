@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Usuario } from '../model/usuario';
 
 @Component({
   selector: 'app-cabecalho',
@@ -8,13 +9,14 @@ import { Router } from '@angular/router';
 })
 export class CabecalhoComponent implements OnInit {
 
+  public usuario: Usuario;
+
   constructor(private router: Router) { }
 
   ngOnInit() {
+    this.usuario = new Usuario();
   }
 
-  voltar() {
-    this.router.navigate(['/']);
-  }
+ 
 
 }
