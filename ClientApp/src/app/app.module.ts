@@ -60,6 +60,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
       { path: 'cliente', component: ClienteComponent },
       { path: 'contato', component: ContatoComponent },
       { path: 'cadastro', component: CadastroComponent },
+      { path: 'faleconosco', component: FaleconoscoComponent}
 
     ]),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
