@@ -77,14 +77,14 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item dropdown">
+      <!--<li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Locais</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="local.html">California</a>
           <a class="dropdown-item" href="local.html">Paris</a>
           <a class="dropdown-item" href="local.html">Dublin</a>
         </div>
-      </li>
+      </li>-->
       <li class="nav-item">
         <a class="nav-link" href="planos.html">Planos</a>
       </li>
@@ -94,9 +94,17 @@
       <li class="nav-item">
         <a class="nav-link" href="#" data-toggle="modal" data-target="#modalLogin">Login</a>
       </li>
-      <li class="nav-item">
-        <a class="btn btn-outline-primary ml-md-2" [routerLink]="['cadastro']">Inscreva-se</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Inscreva-se</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['baba']">Para Babá</a>
+          <a class="dropdown-item" [routerLink]="['cliente']">Para Cliente</a>
+         
+        </div>
       </li>
+      <!--<li class="nav-item">
+        <a class="btn btn-outline-primary ml-md-2" [routerLink]="['cadastro']">Inscreva-se</a>
+      </li>-->
     </ul>
   </div>
 </nav>

@@ -25,6 +25,7 @@ namespace localizaBaba.Web.Controllers
             return Ok(_context.Clientes.ToList());
         }
 
+        [Route("{id}")]
         [HttpGet]
         public ActionResult<Cliente> Get(int id)
         {
@@ -45,13 +46,17 @@ namespace localizaBaba.Web.Controllers
         {
             var clienteId = _context.Clientes.FirstOrDefault(c => c.Id == cliente.Id);
             clienteId.Nome = cliente.Nome;
-            clienteId.SobreNome = cliente.SobreNome;
+            clienteId.CPF = cliente.CPF;
             clienteId.Senha = cliente.Senha;
             clienteId.Email = cliente.Email;
+            clienteId.Endereco = cliente.Endereco;
+            clienteId.Cidade = cliente.Cidade;
+            clienteId.Estado = cliente.Estado;
+            clienteId.CEP = cliente.CEP;
             _context.SaveChanges();
             return Ok(cliente);
         }
-
+        [Route("{id}")]
         [HttpDelete]
         public ActionResult<Cliente> Delete(int id)
         {

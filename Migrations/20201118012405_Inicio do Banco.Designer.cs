@@ -9,8 +9,8 @@ using localizaBaba.Web.BD;
 namespace localizaBaba.Web.Migrations
 {
     [DbContext(typeof(BDContext))]
-    [Migration("20201117152823_trocando o guid por int")]
-    partial class trocandooguidporint
+    [Migration("20201118012405_Inicio do Banco")]
+    partial class IniciodoBanco
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,16 +27,28 @@ namespace localizaBaba.Web.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("CEP")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CPF")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Cidade")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Endereco")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Estado")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nome")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Senha")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SobreNome")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -47,8 +59,13 @@ namespace localizaBaba.Web.Migrations
                         new
                         {
                             Id = 1,
+                            CEP = "xxxxx-xxx",
+                            CPF = "000.000.000-00",
+                            Cidade = "Recife",
                             Email = "baba@baba.com",
-                            Nome = "Novo Baba",
+                            Endereco = "rua casas bahia 123 santo amaro",
+                            Estado = "PE",
+                            Nome = "Josefina",
                             Senha = "123456"
                         });
                 });
@@ -60,16 +77,28 @@ namespace localizaBaba.Web.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("CEP")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CPF")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Cidade")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Endereco")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Estado")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nome")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Senha")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SobreNome")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -80,8 +109,13 @@ namespace localizaBaba.Web.Migrations
                         new
                         {
                             Id = 1,
+                            CEP = "0000-000",
+                            CPF = "000.000.000-01",
+                            Cidade = "Recife",
                             Email = "cliente@cliente.com",
-                            Nome = "Novo Cliente",
+                            Endereco = "rua casas estaqui 123 bongi",
+                            Estado = "PE",
+                            Nome = "Sebastião",
                             Senha = "123456"
                         });
                 });

@@ -1,161 +1,88 @@
-
-<form class="form-signin" #f="ngForm">
-
-  <h5>Clientes</h5>
-  <br />
-
-
-  <hr />
-
-
-  <h6>Cadastrar Clientes</h6>
-
-  <div class="form-row">
-
-    <div class="form-group col-md-6">
-      <label for="inputEmail"><b>Nome</b></label>
-      <input type="text" id="inputNome"
-             name="nome"
-             placeholder="Nome"
-             class="form-control mb-2"
-             [(ngModel)]="cliente.nome"
-             [ngClass]="{
-                  'is-invalid': nome.invalid && (nome.dirty || nome.touched),
-                  'is-valid': nome.valid && (nome.dirty || nome.touched)
-               }"
-             #nome="ngModel"
-             required />
-
-      <div class="invalid-feedback mb-2" *ngIf="nome.invalid && (nome.dirty || nome.touched)">
-
-        <div *ngIf="nome.errors.required">
-          Nome deve ser preenchido
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="form-group col-md-6">
-      <label for="inputSobreNome"><b>Sobrenome</b> </label>
-      <input type="text" id="inputSobreNome"
-             name="sobreNome"
-             placeholder="Sobrenome"
-             class="form-control mb-2"
-             [(ngModel)]="cliente.sobreNome"
-             [ngClass]="{
-                  'is-invalid': sobreNome.invalid && (sobreNome.dirty || sobreNome.touched),
-                  'is-valid': sobreNome.valid && (sobreNome.dirty || sobreNome.touched)
-               }"
-             #sobreNome="ngModel"
-             required />
-      <div class="invalid-feedback mb-2" *ngIf="sobreNome.invalid && (sobreNome.dirty || sobreNome.touched)">
-        <div *ngIf="sobreNome.errors.required">
-          Sobrenome deve ser preenchido
-        </div>
-
-      </div>
-
-    </div>
-
+<<section class="container">
+  <div class="my-5 text-center">
+    <span class="h6 d-block">PROCURANDO BABÁ PARA CUIDAR DO SEU FILHO</span>
+    <h3 class="display-4 text-primary">CADASTRE-SE</h3>
   </div>
+  <form [formGroup]="clienteForm" (ngSubmit)="OnSubmit()">
+    <div class="row">
 
-  <div class="form-row">
-
-    <div class="form-group col-md-4">
-
-      <label for="inputEmail"><b>E-mail</b></label>
-      <input type="email" id="inputEmail"
-             name="email"
-             placeholder="E-mail"
-             class="form-control mb-2"
-             [(ngModel)]="cliente.email"
-             [ngClass]="{
-                  'is-invalid': email.invalid && (email.dirty || email.touched),
-                  'is-valid': email.valid && (email.dirty || email.touched)
-               }"
-             #email="ngModel"
-             email
-             required />
-
-      <div class="invalid-feedback mb-2" *ngIf="email.invalid && (email.dirty || email.touched)">
-
-        <div *ngIf="email.errors.required">
-          Email deve ser preenchido
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputNome">Nome</label>
+          <input type="text"
+                 id="inputNome"
+                 formControlName="nome"
+                 class="form-control"
+                 placeholder="Nome Completo do Cliente">
         </div>
-
-        <div *ngIf="email.errors.email">
-          E-mail não está no formato correto
+        <div class="form-group col-md-6">
+          <label for="inputCPF">CPF</label>
+          <input type="number"
+                 id="inputCPF"
+                 class="form-control"
+                 formControlName="CPF"
+                 placeholder="xxx.xxx.xxx-xx">
         </div>
+        <div class="form-group col-md-6">
+          <label for="inputEmail">E-mail</label>
+          <input type="email"
+                 class="form-control"
+                 id="inputEmail"
+                 formControlName="email"
+                 placeholder="localizababa@gmail.com">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputSenha">senha</label>
+          <input type="password"
+                 class="form-control"
+                 formControlName="senha"
+                 id="inputSenha"
+                 placeholder="Digite sua senha.">
+        </div>
+        <div class="form-group col-12">
+          <label for="inputEndereco">Endereço</label>
+          <input type="text"
+                 id="inputEndereco"
+                 class="form-control"
+                 formControlName="endereco"
+                 placeholder="Numero, nome da rua, casa..">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputCidade">Cidade</label>
+          <input type="text"
+                 class="form-control"
+                 id="inputCidade"
+                 formControlName="cidade"
+                 placeholder="Informe sua Cidade Natal..">
+        </div>
+        <div class="form-group col-md-3 col-6">
+          <label for="inputEstado">Estado o Estado</label>
+          <select id="inputEstado"
+                  formControlName="estado"
+                  class="form-control">
+            <option>Estados</option>
+            <option>RJ</option>
+            <option>SP</option>
+            <option>MG</option>
+            <option>PE</option>
+          </select>
+        </div>
+        <div class="form-group col-md-3 col-6">
+          <label for="inputCEP">Cep</label>
+          <input type="text"
+                 class="form-control"
+                 id="inputCEP"
+                 formControlName="CEP"
+                 placeholder="Digite seu CEP..">
+        </div>
+        <button type="submit" class="btn btn-primary mb-2" >Cadastre-se</button><br>
+        <button type="button" class="btn mb-2" (click)="voltar()">Voltar</button>
+
+
       </div>
 
     </div>
-
-    <div class="form-group col-md-4">
-      <label for="inputSenha"><b>Senha</b></label>
-      <input type="password" minlength="6" id="inputSenha"
-             name="senha"
-             placeholder="Senha"
-             class="form-control mb-2"
-             [(ngModel)]="cliente.senha"
-             [ngClass]="{
-                  'is-invalid': senha.invalid && (senha.dirty || senha.touched),
-                  'is-valid': senha.valid && (senha.dirty || senha.touched)
-               }"
-             #senha="ngModel"
-             required />
-      <div class="invalid-feedback mb-2" *ngIf="senha.invalid && (senha.dirty || senha.touched)">
-        <div *ngIf="senha.errors.required">
-          Senha deve ser preenchida
-        </div>
-
-      </div>
-    </div>
-
-    <div class="form-group col-md-4">
-
-      <label for="inputSenhaDois"><b>Confirmar Senha</b></label>
-      <input type="password" minlength="6" id="inputSenhaDois"
-             name="senhaDois"
-             placeholder="Confirmar Senha"
-             class="form-control mb-2"
-             [(ngModel)]="cliente.senhaDois"
-             [ngClass]="{
-                  'is-invalid': senhaDois.invalid && (senhaDois.dirty || senhaDois.touched),
-                  'is-valid': senhaDois.valid && (senhaDois.dirty || senhaDois.touched)
-               }"
-             #senhaDois="ngModel"
-             required />
-      <div class="invalid-feedback mb-2" *ngIf="senhaDois.invalid && (senhaDois.dirty || senhaDois.touched)">
-        <div *ngIf="senhaDois.errors.required">
-
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-
-  <button class="btn btn-success" type="submit" (click)="cadastrar()" [disabled]="!f.valid">
-    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" *ngIf="ativar_spinner"></span>
-    Salvar
-  </button><br /><br />
-
-
-
-  <button (click)="voltar()">Voltar</button>
-
-  <div class="alert alert-danger" *ngIf="mensagem">
-    {{ mensagem }}
-  </div>
-
-
-  <div class="alert alert-success" *ngIf="usuarioCadastrado">
-
-    Cliente cadastrado com sucesso! <a class="alert-link" [routerLink]='["/"]'> Clique Aqui! </a> para entrar no sistema com a sua conta!
-  </div>
-
-
-</form>
+  </form>
+</section>
 
 

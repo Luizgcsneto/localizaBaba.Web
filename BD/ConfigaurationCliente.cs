@@ -16,9 +16,14 @@ namespace localizaBaba.Web.BD
                  new Cliente()
                  {
                      Id = 1,
-                     Nome = "Novo Cliente",
+                     Nome = "Sebastião",
+                     CPF = "000.000.000-01",
                      Email = "cliente@cliente.com",
-                     Senha = "123456"
+                     Senha = "123456",
+                     Endereco = "rua casas estaqui 123 bongi",
+                     Cidade = "Recife",
+                     Estado = "PE",
+                     CEP = "0000-000"
                  }
 
               );
