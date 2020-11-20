@@ -27,10 +27,10 @@ export class CabecalhoComponent implements OnInit {
     this.clienteService.verificarCliente(this.cliente)
       .subscribe(
         data => {
-
+          console.log(data);
         },
         err => {
-
+          console.log(err.error);
         }
     );
   }

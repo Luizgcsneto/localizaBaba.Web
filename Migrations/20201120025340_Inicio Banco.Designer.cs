@@ -9,8 +9,8 @@ using localizaBaba.Web.BD;
 namespace localizaBaba.Web.Migrations
 {
     [DbContext(typeof(BDContext))]
-    [Migration("20201119224135_ajuste dos atributos")]
-    partial class ajustedosatributos
+    [Migration("20201120025340_Inicio Banco")]
+    partial class InicioBanco
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

@@ -37,8 +37,8 @@ namespace localizaBaba.Web.BD
         {
 
             modelBuilder.ApplyConfiguration(new ConfigurationUsuario());
-            modelBuilder.ApplyConfiguration(new ConfigarationBaba());
-            modelBuilder.ApplyConfiguration(new ConfigaurationCliente());
+            modelBuilder.ApplyConfiguration(new ConfigurationBaba());
+            modelBuilder.ApplyConfiguration(new ConfigurationCliente());
 
         }
     }

@@ -2,7 +2,7 @@
 
 namespace localizaBaba.Web.Migrations
 {
-    public partial class IniciodoBanco : Migration
+    public partial class InicioBanco : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,14 +12,14 @@ namespace localizaBaba.Web.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Nome = table.Column<string>(nullable: true),
-                    CPF = table.Column<string>(nullable: true),
-                    Email = table.Column<string>(nullable: true),
-                    Senha = table.Column<string>(nullable: true),
-                    Endereco = table.Column<string>(nullable: true),
-                    Cidade = table.Column<string>(nullable: true),
-                    Estado = table.Column<string>(nullable: true),
-                    CEP = table.Column<string>(nullable: true)
+                    Nome = table.Column<string>(nullable: false),
+                    CPF = table.Column<string>(nullable: false),
+                    Email = table.Column<string>(nullable: false),
+                    Senha = table.Column<string>(nullable: false),
+                    Endereco = table.Column<string>(nullable: false),
+                    Cidade = table.Column<string>(nullable: false),
+                    Estado = table.Column<string>(nullable: false),
+                    CEP = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -32,14 +32,14 @@ namespace localizaBaba.Web.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Nome = table.Column<string>(nullable: true),
-                    CPF = table.Column<string>(nullable: true),
-                    Email = table.Column<string>(nullable: true),
-                    Senha = table.Column<string>(nullable: true),
-                    Endereco = table.Column<string>(nullable: true),
-                    Cidade = table.Column<string>(nullable: true),
-                    Estado = table.Column<string>(nullable: true),
-                    CEP = table.Column<string>(nullable: true)
+                    Nome = table.Column<string>(nullable: false),
+                    CPF = table.Column<string>(nullable: false),
+                    Email = table.Column<string>(nullable: false),
+                    Senha = table.Column<string>(nullable: false),
+                    Endereco = table.Column<string>(nullable: false),
+                    Cidade = table.Column<string>(nullable: false),
+                    Estado = table.Column<string>(nullable: false),
+                    CEP = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -52,10 +52,9 @@ namespace localizaBaba.Web.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Nome = table.Column<string>(nullable: true),
-                    SobreNome = table.Column<string>(nullable: true),
-                    Email = table.Column<string>(nullable: true),
-                    Senha = table.Column<string>(nullable: true)
+                    Nome = table.Column<string>(nullable: false),
+                    Email = table.Column<string>(nullable: false),
+                    Senha = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -74,8 +73,8 @@ namespace localizaBaba.Web.Migrations
 
             migrationBuilder.InsertData(
                 table: "Usuarios",
-                columns: new[] { "Id", "Email", "Nome", "Senha", "SobreNome" },
-                values: new object[] { 1, "luiz@rkcomex.com", "Luiz", "123456", null });
+                columns: new[] { "Id", "Email", "Nome", "Senha" },
+                values: new object[] { 1, "luiz@rkcomex.com", "Luiz", "123456" });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

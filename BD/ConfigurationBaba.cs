@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace localizaBaba.Web.BD
 {
-    public class ConfigarationBaba : IEntityTypeConfiguration<Baba>
+    public class ConfigurationBaba : IEntityTypeConfiguration<Baba>
     {
         public void Configure(EntityTypeBuilder<Baba> builder)
         {
