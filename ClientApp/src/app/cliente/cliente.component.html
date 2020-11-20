@@ -3,7 +3,7 @@
     <span class="h6 d-block">PROCURANDO BABÁ PARA CUIDAR DO SEU FILHO</span>
     <h3 class="display-4 text-primary">CADASTRE-SE</h3>
   </div>
-  <form [formGroup]="clienteForm" (ngSubmit)="OnSubmit()">
+  <form class="form-signin" #f="ngForm" (ngSubmit)="cadastrarCliente(f)">
     <div class="row">
 
       <div class="form-row">
@@ -11,7 +11,9 @@
           <label for="inputNome">Nome</label>
           <input type="text"
                  id="inputNome"
-                 formControlName="nome"
+                 name="nome"
+                 [(ngModel)]="cliente.nome"
+                 #nome="ngModel"
                  class="form-control"
                  placeholder="Nome Completo do Cliente">
         </div>
@@ -19,23 +21,29 @@
           <label for="inputCPF">CPF</label>
           <input type="number"
                  id="inputCPF"
+                 name="CPF"
+                 [(ngModel)]="cliente.CPF"
+                 #CPF="ngModel"
                  class="form-control"
-                 formControlName="CPF"
                  placeholder="xxx.xxx.xxx-xx">
         </div>
         <div class="form-group col-md-6">
           <label for="inputEmail">E-mail</label>
           <input type="email"
                  class="form-control"
+                 name="email"
+                 [(ngModel)]="cliente.email"
+                 #email="ngModel"
                  id="inputEmail"
-                 formControlName="email"
                  placeholder="localizababa@gmail.com">
         </div>
         <div class="form-group col-md-6">
           <label for="inputSenha">senha</label>
           <input type="password"
                  class="form-control"
-                 formControlName="senha"
+                 name="senha"
+                 [(ngModel)]="cliente.senha"
+                 #senha="ngModel"
                  id="inputSenha"
                  placeholder="Digite sua senha.">
         </div>
@@ -43,8 +51,10 @@
           <label for="inputEndereco">Endereço</label>
           <input type="text"
                  id="inputEndereco"
+                 name="endereco"
+                 [(ngModel)]="cliente.endereco"
+                 #endereco="ngModel"
                  class="form-control"
-                 formControlName="endereco"
                  placeholder="Numero, nome da rua, casa..">
         </div>
         <div class="form-group col-md-6">
@@ -52,14 +62,18 @@
           <input type="text"
                  class="form-control"
                  id="inputCidade"
-                 formControlName="cidade"
+                 name="cidade"
+                 [(ngModel)]="cliente.cidade"
+                 #cidade="ngModel"
                  placeholder="Informe sua Cidade Natal..">
         </div>
         <div class="form-group col-md-3 col-6">
           <label for="inputEstado">Estado</label>
           <select id="inputEstado"
-                  formControlName="estado"
-                  class="form-control">
+                  class="form-control"
+                  name="estado"
+                  [(ngModel)]="cliente.estado"
+                  #estado="ngModel">
             <option>Estados</option>
             <option>AC</option>
             <option>AL</option>
@@ -95,10 +109,12 @@
           <input type="text"
                  class="form-control"
                  id="inputCEP"
-                 formControlName="CEP"
+                  name="CEP"
+                  [(ngModel)]="cliente.CEP"
+                  #CEP="ngModel"
                  placeholder="Digite seu CEP..">
         </div>
-        <button type="submit" class="btn btn-primary mb-2" >Cadastre-se</button><br>
+        <button type="submit" class="btn btn-primary mb-2">Cadastre-se</button><br>
         <button type="button" class="btn mb-2" (click)="voltar()">Voltar</button>
 
 

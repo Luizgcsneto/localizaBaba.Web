@@ -13,6 +13,7 @@ export class ClienteComponent implements OnInit {
 
   clienteForm: FormGroup;
   public cliente: Cliente;
+  public clientes: Cliente[];
 
   constructor(private router: Router, private fb: FormBuilder, private clienteService: ClienteService) { }
 
@@ -30,13 +31,24 @@ export class ClienteComponent implements OnInit {
     });
 
     this.cliente = new Cliente();
+    this.clientes = new Array<Cliente>();
   }
 
   voltar() {
     this.router.navigate(['/']);
   }
 
-  cadastrar() {
+  cadastrarCliente(form) {
+    this.clientes.push(form.value)
+
+    this.cliente.nome = "";
+    this.cliente.CEP = "";
+    this.cliente.cidade = "";
+    this.cliente.email = "";
+    this.cliente.endereco = "";
+    this.cliente.CPF = null;
+    this.cliente.estado = "";
+
 
   }
 
