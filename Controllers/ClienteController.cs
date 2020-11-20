@@ -29,16 +29,55 @@ namespace localizaBaba.Web.Controllers
         [HttpGet]
         public ActionResult<Cliente> Get(int id)
         {
-            var cliente = _context.Clientes.FirstOrDefault(c => c.Id == id);
-            return Ok(cliente);
+            try
+            {
+                var cliente = _context.Clientes.FirstOrDefault(c => c.Id == id);
+                return Ok(cliente);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
+
         }
 
         [HttpPost]
         public ActionResult<Cliente> Post(Cliente cliente)
         {
-            _context.Clientes.Add(cliente);
-            _context.SaveChanges();
-            return Ok(cliente);
+
+            try
+            {
+                _context.Clientes.Add(cliente);
+                _context.SaveChanges();
+                return Ok(cliente);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
+
+        }
+
+        [HttpPost("VerificarCliente")]
+        public ActionResult VerificarCliente([FromBody] Cliente cliente)
+        {
+            try
+            {
+                if (cliente.Email == "luiz@gmail.com" && cliente.Senha == "123456")
+                {
+                    return Ok(cliente);
+                }
+                else
+                {
+                    return BadRequest("Cliente ou Senha inválida");
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                return BadRequest(ex.ToString());
+            }
         }
 
         [HttpPut]

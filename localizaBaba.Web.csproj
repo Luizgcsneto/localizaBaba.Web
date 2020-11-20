@@ -13,6 +13,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.9">
@@ -59,9 +60,9 @@
     <TypeScriptCompile Include="ClientApp\src\app\model\cliente.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\model\usuario.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\regras\regras.component.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\servico\baba.service.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\servico\cliente.service.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\servico\usuario.service.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\servico\baba\baba.service.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\servico\cliente\cliente.service.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\servico\usuario\usuario.service.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

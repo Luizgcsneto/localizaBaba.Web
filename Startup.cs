@@ -25,31 +25,31 @@ namespace localizaBaba.Web
         {
             services.AddControllersWithViews();
             // In production, the Angular files will be served from this directory
-
+            services.AddCors();
 
             // Register the Swagger generator, defining 1 or more Swagger documents
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo
-                {
-                    Version = "v1",
-                    Title = "Minha WeBAPI V1",
-                    Description = "Localiza Babá",
-                    TermsOfService = new Uri("https://example.com/terms"),
-                    Contact = new OpenApiContact
-                    {
-                        Name = "Luiz Gonzaga",
-                        Email = string.Empty,
-                        Url = new Uri("https://twitter.com/spboyer"),
-                    },
-                    License = new OpenApiLicense
-                    {
-                        Name = "Use under LICX",
-                        Url = new Uri("https://example.com/license"),
-                    }
-                });
-              
-            });
+            //services.AddSwaggerGen(c =>
+            //{
+            //    c.SwaggerDoc("v1", new OpenApiInfo
+            //    {
+            //        Version = "v1",
+            //        Title = "Minha WeBAPI V1",
+            //        Description = "Localiza Babá",
+            //        TermsOfService = new Uri("https://example.com/terms"),
+            //        Contact = new OpenApiContact
+            //        {
+            //            Name = "Luiz Gonzaga",
+            //            Email = string.Empty,
+            //            Url = new Uri("https://twitter.com/spboyer"),
+            //        },
+            //        License = new OpenApiLicense
+            //        {
+            //            Name = "Use under LICX",
+            //            Url = new Uri("https://example.com/license"),
+            //        }
+            //    });
+            //    //c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First()); //This line
+            //});
 
             services.AddSpaStaticFiles(configuration =>
             {
@@ -61,20 +61,20 @@ namespace localizaBaba.Web
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
 
-            app.UseSwagger();
+            //app.UseSwagger();
 
-            app.UseSwagger(c =>
-            {
-                c.SerializeAsV2 = true;
-            });
+            //app.UseSwagger(c =>
+            //{
+            //    c.SerializeAsV2 = true;
+            //});
 
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Minha WeBAPI V1");
+            //app.UseSwaggerUI(c =>
+            //{
+            //    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Minha WeBAPI V1");
 
-                // To serve SwaggerUI at application's root page, set the RoutePrefix property to an empty string.
-                c.RoutePrefix = string.Empty;
-            });
+            //    // To serve SwaggerUI at application's root page, set the RoutePrefix property to an empty string.
+            //    c.RoutePrefix = string.Empty;
+            //});
 
             if (env.IsDevelopment())
             {
@@ -87,7 +87,8 @@ namespace localizaBaba.Web
                 app.UseHsts();
             }
 
-            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+          //  app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            app.UseCors(x => x.SetIsOriginAllowed(x => _ = true).AllowAnyMethod().AllowCredentials());
             app.UseHttpsRedirection();
 
             app.UseHttpsRedirection();

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Usuario } from '../model/usuario';
-import { UsuarioService } from '../servico/usuario.service';
+import { UsuarioService } from '../servico/usuario/usuario.service';
 
 @Component({
   selector: 'app-nav-menu',

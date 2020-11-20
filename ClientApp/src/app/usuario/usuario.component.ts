@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { UsuarioService } from '../servico/usuario/usuario.service';
 
 @Component({
   selector: 'app-usuario',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class UsuarioComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private usuarioServico: UsuarioService) { }
 
   ngOnInit()
   {

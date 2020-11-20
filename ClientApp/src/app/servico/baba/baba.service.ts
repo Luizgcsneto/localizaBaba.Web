@@ -2,17 +2,19 @@ import { Injectable, Inject, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { Router } from '@angular/router';
-import { Cliente } from '../model/cliente';
+import { Baba } from '../../model/baba';
+
 
 @Injectable({
   providedIn: 'root'
 })
-export class ClienteService implements OnInit {
+export class BabaService implements OnInit {
 
-  private cliente: Cliente;
+
+  private baba: Baba;
 
   ngOnInit(): void {
-       
-    }
-
+     
+  }
+  
 }
