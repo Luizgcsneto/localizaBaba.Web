@@ -28,6 +28,8 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatChipsModule, MatDialogModule } from '@angular/material';
+import { LoginClienteComponent } from './login-cliente/login-cliente.component';
+import { LoginBabaComponent } from './login-baba/login-baba.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { MatChipsModule, MatDialogModule } from '@angular/material';
     CabecalhoComponent,
     FooterComponent,
     ContatoComponent,
-    CadastroComponent
+    CadastroComponent,
+    LoginClienteComponent,
+    LoginBabaComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
